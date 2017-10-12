@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>
+         hbd vijji
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link type ="text/css" href="style.css" rel = "stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+
+  </head>
+  <body>
+
+         <div class="container">
+
+
+                            <div class="balloon" >
+
+                                     <div><span>V</span>
+                                     </div>
+                                     <div><span>I</span>
+                                     </div>
+                                     <div><span>J</span>
+                                     </div>
+                                     <div><span>J</span>
+                                     </div>
+                                     <div><span>I</span>
+                                     </div>
+                                     <div><span>!</span>
+                                    </div>
+                            </div>
+
+             <br>
+             <h1 class = "display-1 font1">Happy Birthday </h1>
+          <h2 class = "font2">---13th October dhayyam---</h2>
+
+         </div>
+         <script>
+
+         </script>
+         <script>
+             if (document.location.search.match(/type=embed/gi)) {
+                 window.parent.postMessage('resize', "*");
+             }
+         </script>
+
+  <!--Simply copy and paste just above </body></html> in your page.-->
+
+  <script>
+  //  This script and many more from
+  //   http://rainbow.arch.scriptmania.com
+  if (document.getElementById){
+  //   Plenty of black gives a better sparkle effect.
+  showerCol=new Array('#000000','#ff0000','#ffffff','#000000','#00ff00','#ff00ff','#ffffff','#ffa500','#000000','#fff000');
+  launchCol=new Array('#ffff00','#ff00ff','#00ffff','#ffffff','#ff8000');
+  runSpeed=70; //setTimeout speed.
+  //   *** DO NOT EDIT BELOW ***
+  var yPos=200;
+  var xPos=200;
+  var explosionSize=200;
+  var launchColour='#ffff80';
+  var timer=null;
+  var dims=8;
+  var evn=360/14;
+  firework=new Array();
+  var ieType=(typeof window.innerWidth != 'number');
+  var ieRef=((ieType) && (document.compatMode) &&
+  (document.compatMode.indexOf("CSS") != -1))
+  ?document.documentElement:document.body;
+  thisStep=0;
+  step=5;
+  for (i=0; i < 14; i++){
+  document.write('<div id="sparks'+i+'" style="position:absolute;top:0px;left:0px;border-radius:50%;height:'+dims+'px;width:'+dims+';font-size:'+dims+';background-color:'+launchColour+'"><\/div>');
+  firework[i]=document.getElementById("sparks"+i).style;
+  }
+  function winDims(){
+  winH=(ieType)?ieRef.clientHeight:window.innerHeight;
+  winW=(ieType)?ieRef.clientWidth:window.innerWidth;
+  bestFit=(winW >= winH)?winH:winW;
+  }
+  winDims();
+  window.onresize=new Function("winDims()");
+  function Reset(){
+  var dsy=(ieType)?ieRef.scrollTop:window.pageYOffset;
+  thisStep=-1;
+  launchColour = launchCol[Math.floor(Math.random()*launchCol.length)];
+  explosionSize=Math.round(100+Math.random()*(bestFit/4));
+  yPos = explosionSize+Math.round(Math.random()*(winH-(explosionSize*2.2)))+dsy;
+  xPos = explosionSize+Math.round(Math.random()*(winW-(explosionSize*2.2)));
+
+  for (i=0; i < 14; i++){
+  firework[i].backgroundColor=launchColour;
+  firework[i].width=dims+"px";
+  firework[i].height=dims+"px";
+  firework[i].fontSize=dims+"px";
+  }
+  Fireworks();
+  }
+  function Fireworks(){
+  thisStep+=step;
+  timer=setTimeout("Fireworks()",runSpeed);
+  for (i=0; i < 14; i++){
+  firework[i].top = yPos + explosionSize * Math.sin(i*evn*Math.PI/180)*Math.sin(thisStep/100)+"px";
+  firework[i].left= xPos + explosionSize * Math.cos(i*evn*Math.PI/180)*Math.sin(thisStep/100)+"px";
+  if (thisStep > 100){
+  var dims_change=(explosionSize < 150)?dims:Math.round(dims+Math.random()*2);
+  firework[i].backgroundColor=showerCol[Math.floor(Math.random()*showerCol.length)];
+  firework[i].width=dims_change+"px";
+  firework[i].height=dims_change+"px";
+  firework[i].fontSize=dims_change+"px";
+  }
+  }
+  if (thisStep > 160){
+  clearTimeout(timer);
+  Reset();
+  }
+  }
+  window.onload=Fireworks;
+  }
+  </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
